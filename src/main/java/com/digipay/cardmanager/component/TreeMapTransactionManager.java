@@ -10,12 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class DefaultCardTransactionManager implements CardTransactionManager {
+public class TreeMapTransactionManager implements CardTransactionManager {
 
     private final SimpleMultiValueTree<Long, Long, Card> cardMultiValueTree;
     private final CardRepository cardRepository;
 
-    public DefaultCardTransactionManager(
+    public TreeMapTransactionManager(
             final SimpleMultiValueTree<Long, Long, Card> simpleMultiValueTree, final CardRepository cardRepository){
         this.cardMultiValueTree = simpleMultiValueTree;
         this.cardRepository = cardRepository;
